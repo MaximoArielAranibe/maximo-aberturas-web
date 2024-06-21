@@ -1,0 +1,86 @@
+[
+  {
+    "ventanas": [
+      {
+        "title": "Ventana corrediza",
+        "measure": "120x100 cm",
+        "description": "Ventana de aluminio corrediza con vidrio templado.",
+        "price": 150,
+        "available": true,
+        "thumbnail": "https://ferreteriavidri.com/images/items/large/416789.jpg"
+      },
+      {
+        "title": "Ventana batiente",
+        "measure": "80x60 cm",
+        "description": "Ventana de madera batiente con vidrio simple.",
+        "price": 100,
+        "available": false,
+        "thumbnail": "https://example.com/ventana_batiente_thumbnail.jpg"
+      }
+    ]
+  },
+  {
+    "puertas": [
+      {
+        "title": "Puerta de entrada",
+        "measure": "200x80 cm",
+        "description": "Puerta de acero reforzado con cerradura de seguridad.",
+        "price": 300,
+        "available": true,
+        "thumbnail": "https://example.com/puerta_entrada_thumbnail.jpg"
+      },
+      {
+        "title": "Puerta corrediza",
+        "measure": "180x90 cm",
+        "description": "Puerta corrediza de PVC con mosquitero integrado.",
+        "price": 250,
+        "available": true,
+        "thumbnail": "https://example.com/puerta_corrediza_thumbnail.jpg"
+      }
+    ]
+  },
+  {
+    "portones": [
+      {
+        "title": "Portón metálico",
+        "measure": "300x200 cm",
+        "description": "Portón metálico de dos hojas con acabado galvanizado.",
+        "price": 600,
+        "available": false,
+        "thumbnail": "https://example.com/porton_metalico_thumbnail.jpg"
+      }
+    ]
+  },
+  {
+    "rajas": [
+      {
+        "title": "Rajas de aluminio",
+        "measure": "100x50 cm",
+        "description": "Rajas de aluminio con diseño moderno y duradero.",
+        "price": 80,
+        "available": true,
+        "thumbnail": "https://example.com/rajas_aluminio_thumbnail.jpg"
+      }
+    ]
+  },
+  {
+    "rejas": [
+      {
+        "title": "Rejas de hierro forjado",
+        "measure": "150x100 cm",
+        "description": "Rejas artesanales de hierro forjado con diseño clásico.",
+        "price": 200,
+        "available": true,
+        "thumbnail": "https://example.com/rejas_hierro_forjado_thumbnail.jpg"
+      },
+      {
+        "title": "Rejas extensibles",
+        "measure": "120x80 cm (extensible a 150 cm)",
+        "description": "Rejas extensibles de acero con sistema de seguridad.",
+        "price": 150,
+        "available": true,
+        "thumbnail": "https://example.com/rejas_extensibles_thumbnail.jpg"
+      }
+    ]
+  }
+]
