@@ -26,24 +26,22 @@ const Navbar = () => {
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
-            <span></span>
-
           </button>
         </div>
 
+        <div className={`navbar__menu ${isOpen ? 'is-active' : ''}`}>
+          <ul className="navbar__menu--list">
+            <li className="navbar__menu--item open-sans-bold"><Link to="/puertas">Puertas</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="/puertas-placas">Puertas placas</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="/portones">Portones</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="/ventanas">Ventanas</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="/rajas-de-abrir">Rajas de abrir</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="/rejas">Rejas</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="/aislantes">Aislantes</Link></li>
+          </ul>
+        </div>
       </nav>
-      <div className={`navbar__menu ${isOpen ? 'is-active' : ''}`}>
-        <ul className="navbar__start">
-          <li className="navbar__item"><Link to="/puertas">Puertas</Link></li>
-          <li className="navbar__item"><Link to="/puertas-placas">Puertas placas</Link></li>
-          <li className="navbar__item"><Link to="/portones">Portones</Link></li>
-          <li className="navbar__item"><Link to="/ventanas">Ventanas</Link></li>
-          <li className="navbar__item"><Link to="/rajas-de-abrir">Rajas de abrir</Link></li>
-          <li className="navbar__item"><Link to="/rejas">Rejas</Link></li>
-          <li className="navbar__item"><Link to="/aislantes">Aislantes</Link></li>
-        </ul>
-      </div>
+
     </>
   );
 };

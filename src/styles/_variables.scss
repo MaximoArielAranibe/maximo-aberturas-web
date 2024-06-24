@@ -31,3 +31,10 @@ $neutral-600: #999CA1;
 $neutral-700: #707478;
 $neutral-800: #494C4F;
 $neutral-900: #222526;
+
+.list-style-default{
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
