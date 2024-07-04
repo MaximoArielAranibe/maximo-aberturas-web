@@ -1,3 +1,4 @@
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -7,6 +8,8 @@
   flex-flow: column nowrap;
   height: 100px;
   z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 0 15px;
+
   /* Para asegurar que el navbar esté encima del menú */
 
   &__brand {
@@ -20,7 +23,8 @@
   &__logo {
     display: block;
     text-decoration: none;
-    padding: 0 16px;
+    font-size: 20px;
+    padding: 0 24px;
 
     &--h5:first-child {
       letter-spacing: 1px;
@@ -33,12 +37,11 @@
       text-transform: uppercase;
       font-size: 20px;
       color: $primary-100;
-      transition: 0.8s ease;
+      transition: 0.5s ease;
     }
 
     &--container:hover h5 {
       color: $accent-500;
-      text-decoration: solid 0.1px $neutral-900 underline;
     }
   }
 
@@ -158,14 +161,14 @@
     align-items: center;
     transition: 1s ease;
     transform: translateX(100%);
-    border-left: 2px solid $accent-700;
-    box-shadow: inset;
+    border-left: 2px solid $neutral-500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
     &.is-active {
       display: block;
       padding: 0;
-      transition: 1s ease-in-out all;
+      transition: 0.8s ease-in-out all;
       margin: 0;
       transform: translateX(0);
     }

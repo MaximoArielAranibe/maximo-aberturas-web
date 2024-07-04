@@ -1,9 +1,9 @@
-import 'normalize.css';
-import Main from './components/Main.jsx';
 import { ProductsProvider } from './context/ProductsContext.jsx';
-import Navbar from './components/Navbar.jsx';
-import ErrorPage from './components/ErrorPage.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ErrorPage from './components/ErrorPage.jsx';
+import Navbar from './components/Navbar.jsx';
+import Main from './components/Main.jsx';
+import Carousel from './components/Carousel.jsx';
 
 function App() {
   return (
@@ -13,14 +13,20 @@ function App() {
         <Routes>
           <Route exact
             path='/'
-            errorElement={<ErrorPage />}
             element={<Main />}
+            errorElement={<ErrorPage />}
           />
 
           <Route
             path='/navbar'
+            element={<Navbar />}
             errorElement={<ErrorPage />}
           />
+          <Route
+            path='/carousel'
+            element={<Carousel />}
+          />
+
         </Routes>
       </ProductsProvider>
     </BrowserRouter>
