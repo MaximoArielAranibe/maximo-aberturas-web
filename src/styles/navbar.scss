@@ -1,11 +1,9 @@
-
 .navbar {
   position: fixed;
   width: 100%;
   background: linear-gradient(to right, $primary-800, $primary-700, $primary-600, $primary-300);
   top: 0;
   display: flex;
-  flex-flow: column nowrap;
   height: 100px;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.35) 0 0 15px;
@@ -16,7 +14,6 @@
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -37,10 +34,28 @@
       text-transform: uppercase;
       font-size: 20px;
       color: $primary-100;
-      transition: 0.5s ease;
+      transition: 0.3s ease;
     }
 
     &--container:hover h5 {
+      color: $accent-500;
+    }
+  }
+
+  &__cart {
+    margin-left: 0.5rem;
+
+    a {
+      text-decoration: none;
+      font-family: "Open Sans";
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primary-100;
+      transition: 0.3s ease;
+      font-size: 14px;
+    }
+
+    a:hover {
       color: $accent-500;
     }
   }
@@ -56,6 +71,7 @@
     cursor: pointer;
     position: relative;
     margin-right: 1.8rem;
+    margin-left: auto;
 
     &.is-active {
       transition: 1s ease all;
@@ -273,15 +289,31 @@
     }
   }
 
-  @media (width > 575.98px) {
-    &__menu{
-      width: 33%;
+
+  @include media-breakpoint-up(sm) {
+    .navbar{
+
+      &__menu {
+        width: 24%;
+      }
+
+      &__cart {
+        margin-left: 0.5rem;
+
+        a {
+          font-size: 18px;
+        }
+      }
     }
   }
 
-  @media (width > 1040px) {
-    &__menu{
-      width: 16%;
+  @include media-breakpoint-up(md) {
+    .navbar{
+      &__menu {
+        width: 16%;
+      }
     }
   }
+
 }
+

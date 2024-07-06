@@ -6,6 +6,7 @@
   place-content: center;
   display: flex;
   place-content: center;
+  background-color: $neutral-500;
   padding: 3rem 0;
 
   .carousel {
@@ -15,6 +16,7 @@
     background-color: rgb(242, 243, 255);
     height: 320px;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
     &__item {
       position: absolute;
@@ -74,11 +76,11 @@
       border-radius: 8px;
       font-size: 32px;
       padding-bottom: 5px;
-      }
+    }
 
 
     &__control--anterior:hover,
-    &__control--siguiente:hover{
+    &__control--siguiente:hover {
       color: $accent-500;
     }
 
@@ -144,7 +146,8 @@
 
 @include media-breakpoint-up(xl) {
   .carousel__container {
-    background-color: $primary-900;
+    padding: 6.4rem 0;
+
     .carousel {
       height: 425px;
     }

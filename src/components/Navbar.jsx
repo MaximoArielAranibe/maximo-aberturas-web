@@ -1,6 +1,8 @@
+import '../styles/navbar.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/navbar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +21,10 @@ const Navbar = () => {
               <h5 className="navbar__logo--h5 noto-sans-bold">Aberturas</h5>
             </div>
           </Link>
+
+          <div className="navbar__cart">
+            <Link to='/carrito'>Carrito <FontAwesomeIcon icon={faCartShopping} /></Link>
+          </div>
 
           <button className={`navbar__burger ${isOpen ? 'is-active' : ''}`} onClick={toggleMenu}>
             <span></span>
