@@ -2,18 +2,18 @@
 
 .carousel__container {
   min-width: 100%;
-  height: 100%;
+  height: 100vh;
   place-content: center;
   display: flex;
   place-content: center;
   background-color: $neutral-500;
-  padding: 3rem 0;
 
   .carousel {
     position: relative;
     width: 100%;
     max-height: max-content;
     background-color: rgb(242, 243, 255);
+    top: 17vh;
     height: 320px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -119,14 +119,6 @@
   }
 }
 
-@include media-breakpoint-up(sm) {
-  .carousel__container {
-    .carousel {
-      height: 400px;
-    }
-  }
-}
-
 @include media-breakpoint-up(md) {
   .carousel__container {
     .carousel {
@@ -144,12 +136,10 @@
 }
 
 
-@include media-breakpoint-up(xl) {
+/* @include media-breakpoint-up(xl) {
   .carousel__container {
-    padding: 6.4rem 0;
 
     .carousel {
-      height: 425px;
     }
   }
-}
+} */

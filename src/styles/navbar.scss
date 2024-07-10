@@ -1,5 +1,4 @@
 .navbar {
-  position: fixed;
   width: 100%;
   background: linear-gradient(to right, $primary-800, $primary-700, $primary-600, $primary-300);
   top: 0;
@@ -7,7 +6,8 @@
   height: 100px;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.35) 0 0 15px;
-
+  position: sticky;
+  display: block;
   /* Para asegurar que el navbar esté encima del menú */
 
   &__brand {
@@ -43,7 +43,6 @@
   }
 
   &__cart {
-    margin-left: 0.5rem;
 
     a {
       text-decoration: none;
@@ -179,6 +178,7 @@
     transform: translateX(100%);
     border-left: 2px solid $neutral-500;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 999;
 
 
     &.is-active {

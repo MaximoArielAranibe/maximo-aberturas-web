@@ -2,13 +2,23 @@
 
 .main__container{
   width: 100%;
-  padding-top: 100px;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
   overflow-y: scroll;
-  scroll-snap-type: mandatory;
+  scroll-snap-type: y proximity;
 }
 
 .main__container > section {
+  position: relative;
+  text-align: center;
   height: 100vh;
-  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+}
+
+.main__container > section:first-child{
+  scroll-behavior: smooth;
+  position: relative;
 }

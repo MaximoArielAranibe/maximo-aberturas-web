@@ -5,20 +5,23 @@ const Items = () => {
   const products = useProducts();
 
   return (
-    <section>
-      {products.map(({title,measure,description,price, avaiable,thumbnail}, index) => (
-
-        <div key={index}>
+    <section className="cards">
+    {products.map(({ title, price, description, image }, index) => (
+      <div className="card" key={index}>
+        <img src={image} alt={title} />
+        <div className="card-content">
           <h1>{title}</h1>
-          <p>{measure}</p>
-          <p>{description}</p>
-          <p>{price}</p>
-          <p>{avaiable}</p>
-          <img src={thumbnail} />
-
+          <p className="subtitle">Road Running Shoes</p>
+          <p className="description">{description}</p>
+          <p className="price">${price}</p>
+          <div className="buttons">
+            <button className="favorite">Favourite ♥</button>
+            <button className="add-to-bag">Add to Bag</button>
+          </div>
         </div>
-      ))}
-    </section>
+      </div>
+    ))}
+  </section>
   )
 }
 export default Items;

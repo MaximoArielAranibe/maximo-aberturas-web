@@ -1,0 +1,35 @@
+@import 'variables';
+
+.landing__container {
+  background: url(../assets/images/main-photo-3.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  .landing {
+    background: rgba($color: $neutral-900, $alpha: 0.30);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    &__title {
+      margin: 0;
+      max-width: 100%;
+      font-size: 36px;
+      padding: 4rem 20px 2.5rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: $neutral-100;
+      text-shadow: 3px 5px 2px rgba($color: $primary-900, $alpha: 0.8);
+      text-align: left;
+      font-family: "Noto sans";
+
+      span {
+        color: $accent-400
+      }
+    }
+  }
+}
