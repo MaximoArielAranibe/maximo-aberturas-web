@@ -1,8 +1,9 @@
 import '../styles/navbar.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import SvgFind from './icons/SvgFind';
+import SvgCart2 from './icons/SvgCart2';
+import SvgMenu from './icons/SvgMenu';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,25 +15,19 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar__brand">
-          <Link className="navbar__logo" to="/">
-            <div className="navbar__logo--container">
-              <h5 className="navbar__logo--h5 noto-sans-bold">Maximo</h5>
-              <h5 className="navbar__logo--h5 noto-sans-bold">Aberturas</h5>
-            </div>
-          </Link>
-
-          <div className="navbar__cart">
-            <Link to='/carrito'>Carrito <FontAwesomeIcon icon={faCartShopping} /></Link>
+        <div className="navbar__container">
+          <div className="navbar__brand" to="/">
+            <Link className="navbar__brand--container" to='/'>
+              <h5 className="navbar__brand--h5 poppins-bold">Maximo</h5>
+              <h5 className="navbar__brand--h5 poppins-bold">Aberturas</h5>
+            </Link>
           </div>
 
-          <button className={`navbar__burger ${isOpen ? 'is-active' : ''}`} onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className="navbar__cart">
+            <Link to=''><SvgFind /></Link>
+            <Link to='/cart'><SvgCart2 /></Link>
+            <button className={`navbar__burger ${isOpen ? 'is-active' : ''}`} onClick={toggleMenu}><SvgMenu /></button>
+          </div>
         </div>
 
         <div className={`navbar__menu ${isOpen ? 'is-active' : ''}`}>

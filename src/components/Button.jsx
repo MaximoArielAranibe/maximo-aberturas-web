@@ -2,9 +2,9 @@ import React from 'react';
 import '../styles/button.scss'
 
 
-const Button = ({text, action}) => {
+const Button = ({text, action, marginToTop}) => {
   return (
-    <button class="btn-12" onClick={action}>
+    <button className="btn-12" onClick={action} style={{marginTop:marginToTop}}>
       <span>{text}</span>
     </button>
   )

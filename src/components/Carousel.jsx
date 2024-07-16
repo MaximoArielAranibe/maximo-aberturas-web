@@ -49,7 +49,7 @@ const Carousel = () => {
       <div className="carousel">
         {images.map((image, index) => (
           <div key={index} className={`carousel__item
-          ${index === indexActual ? 'active' : ''}`}
+            ${index === indexActual ? 'active' : ''}`}
           >
             <div className="carousel__img--container">
               <img src={image.src} alt={image.alt} />
