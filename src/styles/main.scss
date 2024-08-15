@@ -4,22 +4,9 @@
   width: 100%;
   height: 100%;
   display: flex;
-  position: relative;
   flex-flow: column nowrap;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
 }
 
 .main__container > section {
-  position: relative;
-  text-align: center;
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-behavior: smooth;
-  padding-top: 100px;
-}
-
-.main__container > section:first-child{
-  scroll-behavior: smooth;
-  position: relative;
+  min-height: 100vh;
 }

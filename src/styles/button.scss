@@ -11,7 +11,7 @@
 .btn-12 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: #1653BF;
+  background-color: $primary-600;
   background-image: none;
   color: $primary-100;
   cursor: pointer;
@@ -48,7 +48,7 @@
   border-radius: 99rem;
   border-width: 2px;
   border-color: $primary-500;
-  padding: 0.5rem 3rem;
+  padding: 0.8rem 3rem;
 }
 
 .btn-12 span {

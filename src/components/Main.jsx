@@ -7,12 +7,11 @@ import Landing from './Landing';
 const Main = () => {
 
   return (
-    <div className='main__container'>
+    <main className='main__container'>
       <Landing />
       <Carousel />
       <Items />
-
-    </div>
+    </main>
   );
 };
 
