@@ -1,12 +1,10 @@
 @import 'variables';
 
-.main__container{
+.main__container {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
 }
 
 .main__container > section {
-  min-height: 100vh;
+  min-height: 100vh; /* Se asegura que cada sección ocupe toda la vista */
 }

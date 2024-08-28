@@ -1,15 +1,9 @@
 .navbar {
   width: 100%;
   top: 0;
-  display: flex;
   height: 100px;
-  z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.35) 0 0 15px;
-  background-color: #28292B;
   background-color: $primary-800;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
   /* Para asegurar que el navbar esté encima del menú */
 
   &__container {

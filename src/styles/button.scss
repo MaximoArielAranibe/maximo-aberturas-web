@@ -1,100 +1,60 @@
-.btn-12,
-.btn-12 *,
-.btn-12 :after,
-.btn-12 :before,
-.btn-12:after,
-.btn-12:before {
-  border: 0 solid;
-  box-sizing: border-box;
+  button{
+    background: none;
+    border: none;
+  }
+
+.button {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  background-color: black;
+  color: $accent-500;
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: .75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color .3s;
 }
 
-.btn-12 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  background-color: $primary-600;
-  background-image: none;
-  color: $primary-100;
-  cursor: pointer;
-  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
-  font-weight: 800;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  mix-blend-mode: difference;
-  position: relative; /* Agregar posición relativa */
-  overflow: hidden; /* Agregar overflow para los pseudo-elementos */
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: black;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
-.btn-12:disabled {
-  cursor: default;
+.button:hover {
+  background-color: $accent-500;
+  color: black;
 }
 
-.btn-12:-moz-focusring {
-  outline: auto;
+.button:hover .button__icon-wrapper {
+  transition: 1s;
+  color: black;
 }
 
-.btn-12 svg {
-  display: block;
-}
-
-.btn-12 [hidden] {
-  display: none;
-}
-
-.btn-12 {
-  border-radius: 99rem;
-  border-width: 2px;
-  border-color: $primary-500;
-  padding: 0.8rem 3rem;
-}
-
-.btn-12 span {
-  position: relative; /* Asegurar que el texto esté encima de los pseudo-elementos */
-  z-index: 1; /* Asegurar que el texto esté encima de los pseudo-elementos */
-}
-
-.btn-12:after,
-.btn-12:before {
-  background: linear-gradient(
-    90deg,
-    $primary-terra 25%,
-    transparent 0,
-    transparent 50%,
-    $primary-terra 0,
-    $primary-terra 75%,
-    transparent 0
-  );
-  content: "";
-  inset: 0;
+.button__icon-svg--copy {
   position: absolute;
-  transform: translateY(var(--progress, 100%));
-  transition: transform 0.2s ease;
-  z-index: 0; /* Asegurar que los pseudo-elementos estén detrás del texto */
+  transform: translate(-150%, 150%);
 }
 
-.btn-12:after {
-  --progress: -100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0,
-    transparent 25%,
-    $primary-terra 0,
-    $primary-terra 50%,
-    transparent 0,
-    transparent 75%,
-    $primary-terra 0
-  );
-  z-index: -1; /* Asegurar que los pseudo-elementos estén detrás del texto */
+.button:hover .button__icon-svg:first-child {
+  transition: transform .3s ease-in-out;
+  transform: translate(150%, -150%);
 }
 
-.btn-12:hover:after,
-.btn-12:hover:before {
-  --progress: 0;
-}
-
-.btn-12:hover span {
-  color: black !important; /* Cambiar el color del texto al pasar el mouse */
+.button:hover .button__icon-svg--copy {
+  transition: transform .3s ease-in-out .1s;
+  transform: translate(0);
 }

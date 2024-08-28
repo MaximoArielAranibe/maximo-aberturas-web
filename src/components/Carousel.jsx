@@ -45,7 +45,7 @@ const Carousel = () => {
   }, [])
 
   return (
-    <section className='carousel__container' id='carousel'>
+    <section className='carousel__container'>
       <div className="carousel">
         {images.map((image, index) => (
           <div key={index} className={`carousel__item

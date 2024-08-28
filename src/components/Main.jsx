@@ -9,8 +9,6 @@ const Main = () => {
   return (
     <main className='main__container'>
       <Landing />
-      <Carousel />
-      <Items />
     </main>
   );
 };
