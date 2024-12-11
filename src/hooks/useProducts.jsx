@@ -1,12 +1,8 @@
 import { useContext } from "react";
-import { ProductsContext } from "../context/ProductsContext.jsx"; // Asegúrate de que la ruta sea correcta
+import { ProductsContext } from "../context/ProductsProvider";
 
-const useProducts = () => {
-  const context = useContext(ProductsContext);
-  if (!context) {
-    throw new Error("useProducts must be used within a ProductsProvider");
-  }
-  return context;
+export const useProducts = () => {
+  const { products } = useContext(ProductsContext)
+  return products
 };
 
-export default useProducts;

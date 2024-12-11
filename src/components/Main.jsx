@@ -1,15 +1,18 @@
 import React from 'react';
 import Carousel from './Carousel';
-import Items from './Items';
 import '../styles/main.scss'
 import Landing from './Landing';
+import Products from './Products';
 
 const Main = () => {
-
+  const items = ["Producto 1", "Producto 2", "Producto 3", "Producto 4", "Producto 5"];
   return (
-    <main className='main__container'>
+    <>
       <Landing />
-    </main>
+      <Carousel items={items}/>
+      <Products category="puertas"/>
+      <Products category="ventanas"/>
+    </>
   );
 };
 

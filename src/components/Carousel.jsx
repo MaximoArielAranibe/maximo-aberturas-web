@@ -36,8 +36,6 @@ const Carousel = () => {
     setIndexActual((indexPrevio) => (indexPrevio + 1) % images.length);
   };
 
-
-
   useEffect(() => {
     const intervalo = setInterval(slideSiguiente, 5000);
 
@@ -55,7 +53,7 @@ const Carousel = () => {
               <img src={image.src} alt={image.alt} />
             </div>
             <div className="caption">
-              <h3 className='noto-sans-bold'>{image.caption}</h3>
+              <h3 className='poppins-medium'>{image.caption}</h3>
             </div>
           </div>
         ))}

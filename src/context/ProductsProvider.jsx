@@ -4,16 +4,12 @@ import data from "../mocks/data.json"; // Asegúrate de que la ruta sea correcta
 const ProductsContext = createContext([]);
 
 const ProductsProvider = ({ children }) => {
-  const [products, setProducts] = useState(data.flatMap(categoria => {
-    const categoriaName = Object.keys(categoria)[0];
-    return categoria[categoriaName].map(producto => ({
-      ...producto,
-      categoria: categoriaName,
-    }));
-  }));
+  // Inicializa el estado con los productos del JSON directamente
+  const [products, setProducts] = useState(data);
+
 
   return (
-    <ProductsContext.Provider value={products}>
+    <ProductsContext.Provider value={{ products, setProducts }}>
       {children}
     </ProductsContext.Provider>
   );

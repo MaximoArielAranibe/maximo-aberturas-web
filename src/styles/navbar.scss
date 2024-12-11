@@ -4,6 +4,8 @@
   height: 100px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 0 15px;
   background-color: $primary-800;
+  position: sticky;
+  z-index: 999;
   /* Para asegurar que el navbar esté encima del menú */
 
   &__container {

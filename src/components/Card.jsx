@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import '../styles/card.scss';
-import productThumbnail from '../assets/images/puerta-roma.png';
-import useProducts from '../hooks/useProducts';
+import { useProducts } from '../hooks/useProducts';
+import { formatPrice } from '../hooks/formatPrice.js'
 
 const Card = () => {
   const scrollContainerRef = useRef(null);
@@ -11,6 +11,8 @@ const Card = () => {
 
   const products = useProducts();
 
+  // Filtra los productos que pertenecen a la categoría "puertas"
+  const filteredProducts = products.filter(product => product.category === 'puertas');
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -26,9 +28,10 @@ const Card = () => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 3; // Ajusta la velocidad de desplazamiento
+    const walk = (x - startX) * 1; // Ajusta la velocidad de desplazamiento
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
+
 
   return (
     <div
@@ -39,21 +42,22 @@ const Card = () => {
       onMouseUp={handleMouseLeaveOrUp}
       onMouseMove={handleMouseMove}
     >
-      {products.map(({ id, title, price, thumbnail }) => {
-        return (
-          <div className="card" key={id}>
-            <picture className="card__thumbnail">
-              <img className="card__thumbnail-img" src={productThumbnail} alt="puerta-nova-simil-madera" />
-              <div className="card__thumbnail-shadow"></div>
-            </picture>
-            <h3 className="card__offer">OFERTA</h3>
-            <div className="card__details">
-              <h4 className="card__details-name">{title.toLowerCase()}</h4>
-              <p className="card__details-price">${price}</p>
-            </div>
+      {filteredProducts.map(({ id, title, price, thumbnail, isInOffer }) => (
+        <div className="card" key={id}>
+          <picture className="card__thumbnail">
+            <img
+              className="card__thumbnail-img"
+              src={thumbnail}
+              alt={title} />
+            <div className="card__thumbnail-shadow"></div>
+          </picture>
+          <div>{isInOffer ? <h3 className="card__offer">OFERTA</h3> : <h3></h3>}</div>
+          <div className="card__details">
+            <h4 className="card__details-name">{title.toLowerCase()}</h4>
+            <p className="card__details-price">${formatPrice(price)}</p>
           </div>
-        )
-      })}
+        </div>
+      ))}
     </div>
   );
 };

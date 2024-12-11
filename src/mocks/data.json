@@ -1,86 +1,317 @@
 [
   {
-    "ventanas": [
-      {
-        "title": "Ventana corrediza",
-        "measure": "120x100 cm",
-        "description": "Ventana de aluminio corrediza con vidrio templado.",
-        "price": 150,
-        "available": true,
-        "thumbnail": "https://ferreteriavidri.com/images/items/large/416789.jpg"
-      },
-      {
-        "title": "Ventana batiente",
-        "measure": "80x60 cm",
-        "description": "Ventana de madera batiente con vidrio simple.",
-        "price": 100,
-        "available": false,
-        "thumbnail": "https://example.com/ventana_batiente_thumbnail.jpg"
-      }
-    ]
+    "id": 1,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "60x30",
+    "price": 43000,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
   },
   {
-    "puertas": [
-      {
-        "title": "Puerta de entrada",
-        "measure": "200x80 cm",
-        "description": "Puerta de acero reforzado con cerradura de seguridad.",
-        "price": 300,
-        "available": true,
-        "thumbnail": "https://example.com/puerta_entrada_thumbnail.jpg"
-      },
-      {
-        "title": "Puerta corrediza",
-        "measure": "180x90 cm",
-        "description": "Puerta corrediza de PVC con mosquitero integrado.",
-        "price": 250,
-        "available": true,
-        "thumbnail": "https://example.com/puerta_corrediza_thumbnail.jpg"
-      }
-    ]
+    "id": 2,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "60x40",
+    "price": 45000,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
   },
   {
-    "portones": [
-      {
-        "title": "Portón metálico",
-        "measure": "300x200 cm",
-        "description": "Portón metálico de dos hojas con acabado galvanizado.",
-        "price": 600,
-        "available": false,
-        "thumbnail": "https://example.com/porton_metalico_thumbnail.jpg"
-      }
-    ]
+    "id": 3,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "80x40",
+    "price": 64300,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
   },
   {
-    "rajas": [
-      {
-        "title": "Rajas de aluminio",
-        "measure": "100x50 cm",
-        "description": "Rajas de aluminio con diseño moderno y duradero.",
-        "price": 80,
-        "available": true,
-        "thumbnail": "https://example.com/rajas_aluminio_thumbnail.jpg"
-      }
-    ]
+    "id": 4,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "1x40",
+    "price": 72800,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
   },
   {
-    "rejas": [
-      {
-        "title": "Rejas de hierro forjado",
-        "measure": "150x100 cm",
-        "description": "Rejas artesanales de hierro forjado con diseño clásico.",
-        "price": 200,
-        "available": true,
-        "thumbnail": "https://example.com/rejas_hierro_forjado_thumbnail.jpg"
-      },
-      {
-        "title": "Rejas extensibles",
-        "measure": "120x80 cm (extensible a 150 cm)",
-        "description": "Rejas extensibles de acero con sistema de seguridad.",
-        "price": 150,
-        "available": true,
-        "thumbnail": "https://example.com/rejas_extensibles_thumbnail.jpg"
-      }
-    ]
+    "id": 5,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "1x50",
+    "price": 78200,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 6,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "1x60",
+    "price": 79200,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 7,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "120x40",
+    "price": 85300,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 8,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "150x40",
+    "price": 87800,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 9,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "120x50",
+    "price": 88900,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 10,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "150x50",
+    "price": 93500,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 11,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "120x60",
+    "price": 89700,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 12,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "150x60",
+    "price": 94000,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 13,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "180x60",
+    "price": 102500,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 14,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "2x60",
+    "price": 108900,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 15,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "2x1",
+    "price": 132000,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 16,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "1x1",
+    "price": 92500,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 17,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "120x110",
+    "price": 111500,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 18,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "150x110",
+    "price": 114500,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },  {
+    "id": 19,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "180x110",
+    "price": 125900,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 20,
+    "category": "ventanas",
+    "title": "Ventana",
+    "measure": "150x150",
+    "price": 142000,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://d2r9epyceweg5n.cloudfront.net/stores/001/901/450/products/1x1-21-f38c105601f43e154c16338840809795-640-0.jpg"
+  },
+  {
+    "id": 21,
+    "category": "ventanas-balcon",
+    "title": "Ventana balcón",
+    "measure": "120x200cm",
+    "price": 205500,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://qmproyectos.com/wp-content/uploads/2021/07/cover_web_23_07_2021-2-1024x683.jpg"
+  },
+  {
+    "id": 22,
+    "category": "ventanas-balcon",
+    "title": "Ventana balcón",
+    "measure": "150x200cm",
+    "price": 222800,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://qmproyectos.com/wp-content/uploads/2021/07/cover_web_23_07_2021-2-1024x683.jpg"
+  },
+  {
+    "id": 23,
+    "category": "ventanas-balcon",
+    "title": "Ventana balcón",
+    "measure": "180x200cm",
+    "price": 243200,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://qmproyectos.com/wp-content/uploads/2021/07/cover_web_23_07_2021-2-1024x683.jpg"
+  },
+  {
+    "id": 24,
+    "category": "ventanas-balcon",
+    "title": "Ventana balcón",
+    "measure": "200x200cm",
+    "price": 255300,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://qmproyectos.com/wp-content/uploads/2021/07/cover_web_23_07_2021-2-1024x683.jpg"
+  },
+  {
+    "id": 24,
+    "category": "ventanas-balcon",
+    "title": "Ventana balcón",
+    "measure": "240x200cm",
+    "price": 326200,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://qmproyectos.com/wp-content/uploads/2021/07/cover_web_23_07_2021-2-1024x683.jpg"
+  },
+  {
+    "id": 25,
+    "category": "puertas",
+    "title": "Puerta roma",
+    "measure": "086x203cm",
+    "description": "Chapa pre pintada, Libre mantenimiento, Aplique de acero inoxidable, Burlete perimetral, Incluye barral recto de acero, Con espuma poliuretánica, Cerradura europerfil.",
+    "price": 330000,
+    "available": true,
+    "thumbnail": "https://i.postimg.cc/T1yqv3qP/puerta-roma.png",
+    "isInOffer": true
+  },
+  {
+    "id": 26,
+    "category": "puertas",
+    "title": "Puerta venus",
+    "measure": "086x203cm",
+    "description": "Puerta corrediza de PVC con mosquitero integrado.",
+    "price": 210000,
+    "available": true,
+    "thumbnail": "https://i.postimg.cc/P5bbjcZ1/puerta-venus-lisa-negra.png",
+    "isInOffer": false
+  },
+  {
+    "id": 27,
+    "category": "puertas",
+    "title": "Puerta venus c/postigo",
+    "measure": "086x203cm",
+    "description": "Apliques de acero inoxidable",
+    "price": 210000,
+    "available": false,
+    "thumbnail": "https://i.postimg.cc/fT9jHkR2/puerta-venus-con-postigo-blanca.png",
+    "isInOffer": true
+  },
+  {
+    "id": 28,
+    "category": "puertas",
+    "title": "Puerta Iris",
+    "measure": "086x203cm",
+    "description": "Doble chapa inyectada de 18mm, economicá y robusta",
+    "price": 175500,
+    "available": true,
+    "thumbnail": "https://i.postimg.cc/P51yqNGp/puerta-nova-economica.png",
+    "isInOffer": false
+  },
+  {
+    "id": 29,
+    "category": "puertas",
+    "title": "Puerta venus blanca",
+    "measure": "086x203cm",
+    "description": "Rejas artesanales de hierro forjado con diseño clásico.",
+    "price": 210000,
+    "available": true,
+    "thumbnail": "https://i.postimg.cc/BvsgPssh/puerta-nova-lisa-blanca.png",
+    "isInOffer": false
+  },
+  {
+    "id": 30,
+    "category": "puertas",
+    "title": "Puerta nova simil madera",
+    "measure": "120x80 cm (extensible a 150 cm)",
+    "description": "Rejas extensibles de acero con sistema de seguridad.",
+    "price": 175500,
+    "available": true,
+    "thumbnail": "https://i.postimg.cc/wBVkhPj9/puerta-nova-simil-madera.png",
+    "isInOffer": true
   }
 ]

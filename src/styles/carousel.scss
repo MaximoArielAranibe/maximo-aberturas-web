@@ -2,30 +2,28 @@
 
 .carousel__container {
   min-width: 100%;
-  height: 100vh;
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-flow: column nowrap;
-  background-color: $neutral-500;
-  text-align: center;
+  background-color: rgb(83, 109, 136, 50%);
+  justify-content: center;
 
   .carousel {
-    position: relative;
     width: 100%;
-    max-height: max-content;
-    background-color: rgb(242, 243, 255);
-    top: 17vh;
     height: 320px;
+    position: absolute;
+    background-color: $neutral-200;
+    padding: 2.4rem 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
     &__item {
-      position: absolute;
       width: 100%;
+      height: 320px;
+      position: absolute;
       opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-      height: 100%;
+      transition: opacity 0.5s ease;
 
       &.active {
-        position: relative;
         opacity: 1;
       }
     }
@@ -36,7 +34,8 @@
       place-content: center;
 
       img {
-        height: 100%;
+        width: 100%;
+        height: 80%;
       }
     }
 
@@ -47,9 +46,8 @@
       transform: translateX(-50%);
       background-color: rgba($neutral-900, 0.9);
       text-align: center;
-      min-width: 33.3%;
+      min-width: 32%;
       border-radius: 8px 6px;
-      margin-bottom: 1rem;
       padding: 0 8px;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
@@ -121,7 +119,7 @@
 @include media-breakpoint-up(md) {
   .carousel__container {
     .carousel {
-      max-width: 90%;
+      max-width: 100%;
 
       &__control--anterior {
         left: 20px;
@@ -129,6 +127,15 @@
 
       &__control--siguiente {
         right: 20px;
+      }
+
+      .caption > h3{
+        font-size: 16px;
+      }
+
+      img{
+        height: 100%;
+        width: 60%;
       }
     }
   }

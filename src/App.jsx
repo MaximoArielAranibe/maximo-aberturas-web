@@ -1,4 +1,4 @@
-import { ProductsProvider } from './context/ProductsContext.jsx';
+import { ProductsProvider } from './context/ProductsProvider.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage.jsx';
 import Navbar from './components/Navbar.jsx';
