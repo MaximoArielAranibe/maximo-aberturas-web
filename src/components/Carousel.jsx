@@ -1,77 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/carousel.scss';
-import img1 from "../assets/images/puerta-roma.png"
-import img2 from "../assets/images/puerta-venus-lisa-negra.png"
-import img3 from "../assets/images/puerta-venus-con-ventana-al-medio.png"
+import React, { useState, useEffect } from "react";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import "../styles/carousel.scss";
+import { Link } from "react-router-dom";
 
-const images = [
-  {
-    src: img1,
-    alt: 'Puerta roma',
-    caption: 'Puerta roma',
-    description: 'Puerta de frente doble chapa inyectada de 18mm simil madera, con barral cuadrado y cerradura europea.'
-  },
-  {
-    src: img2,
-    alt: 'Puerta venus',
-    caption: 'Puerta venus',
-    description: 'QWRQW'
-  },
-  {
-    src: img3,
-    alt: 'Puerta roma combinada',
-    caption: 'Puerta roma combinada',
-    description: 'Elegante y moderna...'
-  }
-];
+export const Carousel = ({ data }) => {
+  const [slide, setSlide] = useState(0);
 
-const Carousel = () => {
-  const [indexActual, setIndexActual] = useState(0);
-
-  const slideAnterior = () => {
-    setIndexActual((indexPrevio) => indexPrevio === 0 ? images.length - 1 : indexPrevio - 1);
+  // Función para avanzar a la siguiente diapositiva
+  const nextSlide = () => {
+    setSlide((prevSlide) => (prevSlide === data.length - 1 ? 0 : prevSlide + 1));
   };
 
-  const slideSiguiente = () => {
-    setIndexActual((indexPrevio) => (indexPrevio + 1) % images.length);
+  // Función para retroceder a la diapositiva anterior
+  const prevSlide = () => {
+    setSlide((prevSlide) => (prevSlide === 0 ? data.length - 1 : prevSlide - 1));
   };
 
+  // Configuración del intervalo automático
   useEffect(() => {
-    const intervalo = setInterval(slideSiguiente, 5000);
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 6000);
 
-    return () => clearInterval(intervalo)
-  }, [])
+    // Limpieza del intervalo al desmontar el componente
+    return () => clearInterval(interval);
+  }, [slide]);
 
   return (
-    <section className='carousel__container'>
-      <div className="carousel">
-        {images.map((image, index) => (
-          <div key={index} className={`carousel__item
-            ${index === indexActual ? 'active' : ''}`}
+    <div className="carousel">
+      {data.map((item, idx) => {
+        return (
+          <div
+            key={idx}
+            className={
+              slide === idx
+                ? "slide-container slide-active"
+                : "slide-container slide-hidden"
+            }
           >
-            <div className="carousel__img--container">
-              <img src={image.src} alt={image.alt} />
-            </div>
-            <div className="caption">
-              <h3 className='poppins-medium'>{image.caption}</h3>
-            </div>
+            {slide === idx && <span className="slide-title oswald">{item.title}</span>}
+            <img
+              src={item.src}
+              alt={item.alt}
+              className="slide"
+            />
+            {slide === idx && (
+              <button className="slide-button">
+                <Link to={item.url} className="slide-link">Ver más</Link>
+              </button>
+            )}
           </div>
-        ))}
-        <button className="carousel__control--anterior" onClick={slideAnterior}>{`<`}</button>
-        <button className="carousel__control--siguiente" onClick={slideSiguiente}>{`>`}</button>
-
-        <div className="carousel__indicadores">
-          {images.map((_, index) => (
-            <span
-              key={index}
-              className={`indicador ${index === indexActual ? 'active' : ''}`}
-              onClick={() => setIndexActual(index)}
-            ></span>
-          ))}
-        </div>
+        );
+      })}
+      <div className="arrow__container">
+        <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
+        <BsArrowRightCircleFill onClick={nextSlide} className="arrow arrow-right" />
       </div>
-    </section>
+      <span className="indicators">
+        {data.map((_, idx) => {
+          return (
+            <button
+              key={idx}
+              onClick={() => setSlide(idx)}
+              className={slide === idx ? "indicator" : "indicator indicator-inactive"}
+            ></button>
+          );
+        })}
+      </span>
+    </div>
   );
 };
-
-export default Carousel;

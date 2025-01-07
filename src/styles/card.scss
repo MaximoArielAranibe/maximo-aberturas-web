@@ -6,9 +6,12 @@
     gap: 20px;
     height: max-content;
     padding: 4.4rem 0;
-    overflow: scroll;
-    padding-left: 3rem;
-    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-left: 2rem;
+    scrollbar-width: none;
+    margin-top: 1rem;
+
+
 
     .card__container:active {
         cursor: grabbing;
@@ -106,6 +109,12 @@
     }
 }
 
+@include media-breakpoint-up(sm) {
+    .card__container {
+        margin-top: 3rem;
+    }
+}
+
 @include media-breakpoint-up(lg) {
     .card__container {
         display: flex;
@@ -114,7 +123,6 @@
         width: 100%;
         gap: 20px;
         height: max-content;
-        margin-top: 2rem;
 
 
         .card {
@@ -138,15 +146,15 @@
             margin-left: 10rem;
         }
 
-        .card:last-child{
+        .card:last-child {
             margin-right: 8rem;
         }
     }
 }
 
-@include media-breakpoint-up(xl){
-    .card__container{
+@include media-breakpoint-up(xxl) {
+    .card__container {
         overflow-x: hidden;
-
+        margin-top: 3rem;
     }
 }

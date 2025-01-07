@@ -9,16 +9,23 @@
   /* Para asegurar que el navbar esté encima del menú */
 
   &__container {
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
+
 
   &__brand {
     text-decoration: none;
-    padding: 0 24px;
-    width: 100%;
+    max-width: 200px;
+    position: relative;
+    left: 10px;
+
+    &:hover {
+      border-bottom: 1px solid $primary-500;
+    }
 
     &--container {
       text-decoration: none;
@@ -35,12 +42,9 @@
       font-size: 24px;
       color: $primary-100;
       transition: 0.3s ease;
-      line-height: 36px;
+
     }
 
-    &--container:hover h5 {
-      color: #EAC195;
-    }
   }
 
   &__cart {
@@ -52,11 +56,13 @@
     button {
       transition: 0.3s ease;
       height: 38px;
+      cursor: pointer;
     }
 
-    a:hover, button:hover {
+    a:hover,
+    button:hover {
       color: $accent-500;
-      border-bottom: 2px solid rebeccapurple;
+      border-bottom: 2px solid $primary-terra;
     }
   }
 
@@ -113,6 +119,7 @@
       text-align: left;
       display: block;
       color: $neutral-100;
+      cursor: pointer;
     }
 
     &--item>a:hover {
@@ -218,6 +225,12 @@
       &__menu {
         width: 16%;
       }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .navbar__brand {
+      left: 40px;
     }
   }
 

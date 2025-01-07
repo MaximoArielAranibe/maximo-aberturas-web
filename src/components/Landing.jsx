@@ -8,8 +8,10 @@ const Landing = () => {
 	return (
 		<header className='landing'>
 			<Title titleStyle="landing__title" title="Las mejores aberturas de aluminio para tu hogar" />
-			<Card />
-			<Button className="landing__button" />
+			<div className="landing__wrapper">
+				<Card />
+				<Button className="landing__button" />
+			</div>
 		</header>
 	)
 }

@@ -1,0 +1,22 @@
+{
+  "slides": [
+    {
+      "src": "https://i.pinimg.com/originals/0d/b9/d2/0db9d21f6bd1c5b22c61e84cea276fe7.jpg",
+      "title": "REJAS",
+      "alt": "Image 3 for carousel",
+      "url": "/categoria/rejas"
+    },
+    {
+      "src": "https://www.construyehogar.com/wp-content/uploads/2016/01/Frachada-principal-casa-moderna-madera.jpg",
+      "title": "VENTANAS",
+      "alt": "Image 2 for carousel",
+      "url": "/categoria/ventanas"
+    },
+    {
+      "src": "https://www.construyehogar.com/wp-content/uploads/2016/01/Casa-moderna-un-piso.jpg",
+      "title": "PORTONES",
+      "alt": "Image 1 for carousel",
+      "url": "/categoria/portones"
+    }
+  ]
+}

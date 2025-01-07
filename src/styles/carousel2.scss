@@ -1,0 +1,150 @@
+@import 'variables';
+
+.carousel__container {
+  min-width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: rgb(83, 109, 136, 50%);
+  justify-content: center;
+
+  .carousel {
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    background-color: $neutral-200;
+    padding: 2.4rem 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    &__item {
+      width: 100%;
+      height: 320px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &__img--container {
+      height: 100%;
+      display: flex;
+      place-content: center;
+
+      img {
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba($neutral-900, 0.9);
+      text-align: center;
+      min-width: 32%;
+      border-radius: 8px 6px;
+      padding: 0 8px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+      h3 {
+        margin: 0.2rem;
+        font-size: 14px;
+        color: $accent-500;
+        text-transform: uppercase;
+        opacity: 1;
+        padding: 0;
+      }
+    }
+
+    &__control--anterior,
+    &__control--siguiente {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $primary-900;
+      border: none;
+      color: $primary-100;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 32px;
+      padding-bottom: 5px;
+    }
+
+
+    &__control--anterior:hover,
+    &__control--siguiente:hover {
+      color: $accent-500;
+    }
+
+    &__control--anterior {
+      left: 10px;
+      padding-right: 8px;
+    }
+
+    &__control--siguiente {
+      right: 10px;
+      padding-left: 8px;
+
+    }
+
+    &__indicadores {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+
+    .indicador {
+      width: 10px;
+      height: 10px;
+      background-color: $accent-900;
+      border-radius: 50%;
+      border: $accent-900 1px solid;
+      cursor: pointer;
+
+      &.active {
+        background-color: $accent-500;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .carousel__container {
+    .carousel {
+      max-width: 100%;
+
+      &__control--anterior {
+        left: 20px;
+      }
+
+      &__control--siguiente {
+        right: 20px;
+      }
+
+      .caption > h3{
+        font-size: 16px;
+      }
+
+      img{
+        height: 100%;
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+/* @include media-breakpoint-up(xl) {
+  .carousel__container {
+
+    .carousel {
+    }
+  }
+} */

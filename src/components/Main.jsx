@@ -1,17 +1,20 @@
 import React from 'react';
-import Carousel from './Carousel';
 import '../styles/main.scss'
 import Landing from './Landing';
 import Products from './Products';
-
+import { slides } from "../mocks/carouselData.json"
+import { Carousel } from './Carousel';
 const Main = () => {
-  const items = ["Producto 1", "Producto 2", "Producto 3", "Producto 4", "Producto 5"];
   return (
     <>
       <Landing />
-      <Carousel items={items}/>
-      <Products category="puertas"/>
-      <Products category="ventanas"/>
+      <Carousel data={slides} />
+      <Products category="ventanas" />
+      <Products category="puertas" />
+      <Products category="ventanas-balcon" />
+      <Products category="portones" />
+      <Products category="puertas-placas" />
+      <Products category="rajas-de-abrir" />
     </>
   );
 };

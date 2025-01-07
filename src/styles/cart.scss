@@ -1,0 +1,48 @@
+.cart {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  &__title {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__item {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    background-color: $primary-500;
+    color: #FFF;
+    padding: 2rem;
+    border: solid 2px black;
+    border-radius: 12px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+
+    &--title {
+      text-transform: capitalize;
+    }
+
+    &--delete {
+      background-color: red;
+      width: 50px;
+      height: 100%;
+      border-radius: 0 12px 10px 0;
+    }
+  }
+
+  &__delete{
+    padding: 2rem;
+    background-color: red;
+    color: #FFF;
+  }
+}

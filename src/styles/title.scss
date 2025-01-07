@@ -1,0 +1,22 @@
+a{
+  cursor: auto;
+}
+
+.title__link{
+  margin: 0;
+  display: inline;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+  padding: 0.1rem;
+
+  &:hover{
+    color: $accent-100;
+    border-bottom: 10px solid $primary-100;
+    border-top: 10px solid $accent-500;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 10px;
+  }
+}
