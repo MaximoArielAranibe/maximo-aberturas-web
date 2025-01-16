@@ -32,4 +32,10 @@ body {
   min-height: 100vh;
   color: $neutral-900;
   background-color: #fff;
+  height: -webkit-fill-avaiable;
+}
+
+
+html{
+  height: -webkit-fill-avaiable;
 }

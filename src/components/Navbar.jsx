@@ -12,19 +12,29 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLogoClick = () => {
+    const landingSection = document.getElementById('landing-section');
+    if (landingSection) {
+      landingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav className="navbar">
         <div className="navbar__container">
           <div className="navbar__brand">
-            <Link className="navbar__brand--container" to='/'>
-              <SvgLogo />
-            </Link>
+            <SvgLogo onClick={handleLogoClick} />
           </div>
 
           <div className="navbar__cart">
-            <Link to='/cart'><SvgCart2 /></Link>
-            <button className={`navbar__burger ${isOpen ? 'is-active' : ''}`} onClick={toggleMenu}><SvgMenu /></button>
+            <Link to="/cart"><SvgCart2 /></Link>
+            <button
+              className={`navbar__burger ${isOpen ? 'is-active' : ''}`}
+              onClick={toggleMenu}
+            >
+              <SvgMenu />
+            </button>
           </div>
         </div>
 
@@ -38,7 +48,7 @@ const Navbar = () => {
             <li className="navbar__menu--item open-sans-bold"><Link to="categoria/rajas-de-abrir">Rajas de abrir</Link></li>
             <li className="navbar__menu--item open-sans-bold"><Link to="categoria/aislantes">Aislantes</Link></li>
             <li className="navbar__menu--item open-sans-bold"><Link to="categoria/rejas">Rejas ventana</Link></li>
-            <li className="navbar__menu--item open-sans-bold"><Link to="categoria/rejas-balcon">Rejas balcon</Link></li>
+            <li className="navbar__menu--item open-sans-bold"><Link to="categoria/rejas-balcon">Rejas balcón</Link></li>
             <li className="navbar__menu--item open-sans-bold"><Link to="categoria/puerta-reja">Puerta reja</Link></li>
           </ul>
         </div>

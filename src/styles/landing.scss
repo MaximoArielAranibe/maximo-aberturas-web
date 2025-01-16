@@ -1,14 +1,14 @@
 .landing {
     font-family: "Poppins";
     min-width: 100%;
-    min-height: calc(100vh - 100px);
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
     justify-content: space-between;
     font-size: 14px;
     overflow: hidden;
-
+    height: calc(100svh - 100px);
+    height: -webkit-fill-avaiable;
 
     &::before {
         content: "";
@@ -27,12 +27,12 @@
     &__title {
         width: 100%;
         text-align: center;
-        color: $accent-500;
+        color: #B8E30B;
         font-family: "Oswald";
         background-color: black;
         font-size: 22px;
         font-weight: 900;
-        margin: 0 0 1.4rem 0;
+        margin: 0 0 2.4rem 0;
         padding: 1rem 0;
         text-transform: uppercase;
     }
@@ -49,6 +49,7 @@
     }
 
     .landing__button {
+        cursor: pointer;
         margin-bottom: 2rem;
         margin-top: auto;
         /* Empuja el botón hacia el final del contenedor */
@@ -56,10 +57,10 @@
 
 }
 
-@include media-breakpoint-up(xl){
+/* @include media-breakpoint-up(xl){
     .landing{
         .landing__wrapper{
             margin-top: 3rem;
         }
     }
-}
+} */

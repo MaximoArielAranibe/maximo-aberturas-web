@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SvgLogo = () => (
+const SvgLogo = ({ onClick }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 320 100"
@@ -8,6 +8,8 @@ const SvgLogo = () => (
     aria-label="Maximo Aberturas logo"
     width="100%"
     height="100%"
+    onClick={onClick} // Llama a la función al hacer clic
+    style={{ cursor: 'pointer' }} // Agrega un cursor interactivo
   >
     <rect width="100%" height="100%" fill="none" />
     <text

@@ -11,9 +11,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: $accent-100;
 
   span {
     display: flex;
     align-items: center;
+    color: $accent-100;
   }
 }

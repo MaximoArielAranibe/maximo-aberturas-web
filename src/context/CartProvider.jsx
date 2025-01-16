@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 export const CartContext = createContext([]);
 
@@ -18,6 +19,11 @@ const CartProvider = ({ children }) => {
     localStorage.setItem('total', JSON.stringify(total));
   }, [cart, total]);
 
+  const notifyAdd = () => {
+    toast.success("Producto agregado al carrito",
+      { position: "bottom-center" })
+  }
+
   const addToCart = (item) => {
     if (!item) return;
 
@@ -34,6 +40,7 @@ const CartProvider = ({ children }) => {
       return [...prevCart, { ...item, quantity: 1 }];
     });
 
+    notifyAdd();
     setTotal((prevTotal) => prevTotal + item.price);
   };
 
@@ -44,7 +51,8 @@ const CartProvider = ({ children }) => {
     if (removedItem) {
       setTotal((prevTotal) => prevTotal - removedItem.price * removedItem.quantity);
     }
-
+    toast.error("Producto eliminado del carrito",
+      { position: "bottom-center" })
     setCart(updatedCart);
   };
 
@@ -53,10 +61,43 @@ const CartProvider = ({ children }) => {
     setTotal(0);
     localStorage.removeItem('cart');
     localStorage.removeItem('total');
+    toast.error("Has vaciado el carrito", { position: 'bottom-center' })
+  };
+
+  const incrementQuantity = (id) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+    const item = cart.find((product) => product.id === id);
+    if (item) {
+      setTotal((prevTotal) => prevTotal + item.price);
+    }
+    toast.success("Cantidad agregada", { position: 'bottom-center' })
+  };
+
+  const decrementQuantity = (id) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.id === id && item.quantity > 1
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter((item) => item.quantity > 0) // Eliminar elementos con quantity = 0
+    );
+    const item = cart.find((product) => product.id === id);
+    if (item && item.quantity > 1) {
+      setTotal((prevTotal) => prevTotal - item.price);
+      toast.error("Cantidad eliminada",
+        { position: "bottom-center" })
+    }
+
   };
 
   return (
-    <CartContext.Provider value={{ cart, total, addToCart, deleteFromCart, clearCart }}>
+    <CartContext.Provider value={{ cart, total, addToCart, deleteFromCart, clearCart, incrementQuantity, decrementQuantity }}>
       {children}
     </CartContext.Provider>
   );
