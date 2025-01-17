@@ -8,6 +8,16 @@
   z-index: 999;
   /* Para asegurar que el navbar esté encima del menú */
 
+  &__contacto{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: left;
+    display: block;
+    color: #FAFAFC;
+    cursor: pointer;
+  }
+
   &__container {
     min-width: 100%;
     height: 100%;
@@ -92,7 +102,6 @@
     transform: translateX(100%);
     border-left: 2px solid $neutral-500;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    z-index: 999;
 
 
     &.is-active {
@@ -102,6 +111,7 @@
       transform: translateX(0);
     }
 
+
     &--list {
       list-style: none;
       text-align: center;
@@ -110,7 +120,7 @@
     }
 
     &--item {
-      padding: 8px 16px;
+      padding: 5px 16px;
     }
 
     &--item>a {

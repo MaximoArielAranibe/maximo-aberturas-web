@@ -1,5 +1,6 @@
 import React from 'react';
 import { formatPrice } from '../hooks/formatPrice.js';
+import '../styles/buttonwhatsapp.scss'
 
 const ButtonWhatsapp = ({ cart, total }) => {
   const generateMessage = () => {
@@ -19,17 +20,7 @@ const ButtonWhatsapp = ({ cart, total }) => {
 
   return (
     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-      <button
-        style={{
-          padding: '10px 20px',
-          fontSize: '16px',
-          backgroundColor: '#1653BF',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
-      >
+      <button className='buttonwhatsapp'>
         Finalizar compra
       </button>
     </a>

@@ -72,16 +72,6 @@
   {
     "id": 8,
     "category": "ventanas",
-    "title": "Ventana 150x40",
-    "measure": "150x40",
-    "price": 110000,
-    "isInOffer": false,
-    "available": true,
-    "thumbnail": "https://i.ibb.co/pJQxxXY/D-NQ-NP-669043-MLA31150413762-062019-O.webp"
-  },
-  {
-    "id": 9,
-    "category": "ventanas",
     "title": "Ventana 120x50",
     "measure": "120x50",
     "price": 99500,
@@ -90,11 +80,21 @@
     "thumbnail": "https://i.ibb.co/pJQxxXY/D-NQ-NP-669043-MLA31150413762-062019-O.webp"
   },
   {
+    "id": 9,
+    "category": "ventanas",
+    "title": "Ventana 120x60",
+    "measure": "120x60",
+    "price": 105000,
+    "isInOffer": false,
+    "available": true,
+    "thumbnail": "https://i.ibb.co/pJQxxXY/D-NQ-NP-669043-MLA31150413762-062019-O.webp"
+  },
+  {
     "id": 10,
     "category": "ventanas",
-    "title": "Ventana 150x50",
-    "measure": "150x50",
-    "price": 115000,
+    "title": "Ventana 150x40",
+    "measure": "150x40",
+    "price": 110000,
     "isInOffer": false,
     "available": true,
     "thumbnail": "https://i.ibb.co/pJQxxXY/D-NQ-NP-669043-MLA31150413762-062019-O.webp"
@@ -102,9 +102,9 @@
   {
     "id": 11,
     "category": "ventanas",
-    "title": "Ventana 120x60",
-    "measure": "120x60",
-    "price": 105000,
+    "title": "Ventana 150x50",
+    "measure": "150x50",
+    "price": 115000,
     "isInOffer": false,
     "available": true,
     "thumbnail": "https://i.ibb.co/pJQxxXY/D-NQ-NP-669043-MLA31150413762-062019-O.webp"

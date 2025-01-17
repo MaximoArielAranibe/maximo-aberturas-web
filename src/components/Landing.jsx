@@ -6,10 +6,11 @@ import { Title } from './Title.jsx';
 
 const Landing = ({ onButtonClick }) => {
   return (
-    <header className="landing" id='landing-section'>
+    <header className="landing" >
       <Title
         titleStyle="landing__title"
         title="Las mejores aberturas de aluminio para tu hogar"
+        id='landing-section'
       />
       <div className="landing__wrapper">
         <Card />

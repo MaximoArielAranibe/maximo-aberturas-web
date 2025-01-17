@@ -1,0 +1,15 @@
+.buttonwhatsapp {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: $primary-600;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.buttonwhatsapp:hover {
+  transform: scale(1.1, 1.1);
+  background-color: $primary-700;
+}

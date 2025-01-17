@@ -6,12 +6,12 @@
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
-*{
-:focus {
-  outline-offset: 0;
+* {
+  :focus {
+    outline-offset: 0;
+  }
 }
 
-}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -36,6 +36,6 @@ body {
 }
 
 
-html{
+html {
   height: -webkit-fill-avaiable;
 }
