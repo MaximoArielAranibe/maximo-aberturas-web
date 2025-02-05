@@ -16,14 +16,22 @@ const ScrollToTop = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Rutas específicas donde no queremos scroll suave
+    const ignoreSmoothScroll = ['/categoria/ventanas', '/categoria/portones', '/categoria/puertas'];
+    const isSmooth = !ignoreSmoothScroll.includes(location.pathname);
+
+    // Si la navegación incluye "ignoreScroll", no hacemos scroll al top
+    if (location.state?.ignoreScroll) return;
+
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
-    });// Desplazarse al top cada vez que la ruta cambia
+      behavior: isSmooth ? 'smooth' : 'auto', // Determina el tipo de scroll según la ruta
+    });
   }, [location]);
 
   return null;
 };
+
 
 function App() {
   return (
@@ -42,7 +50,7 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
           </Routes>
 
-          <Footer />
+            <Footer />
           <ToastContainer autoClose={1000} />
         </CartProvider>
       </ProductsProvider>

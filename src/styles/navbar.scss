@@ -18,6 +18,11 @@
     cursor: pointer;
   }
 
+  &__contacto:hover{
+    color: $accent-500;
+    transition: 0.2s ease all;
+  }
+
   &__container {
     min-width: 100%;
     height: 100%;
