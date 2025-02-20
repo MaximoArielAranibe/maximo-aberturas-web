@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import SvgWhatsapp from './components/icons/SvgWhatsapp.jsx';
 import Footer from './components/Footer.jsx';
 import { useEffect } from 'react';
+import Description from './components/Description.jsx';
 
 // Componente que maneja el scroll al principio de la página
 const ScrollToTop = () => {
@@ -47,10 +48,11 @@ function App() {
             <Route path='/' element={<Main />} />
             <Route path='/categoria/:categoryName' element={<Category />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path="/descripcion/:id" element={<Description />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
 
-            <Footer />
+          <Footer />
           <ToastContainer autoClose={1000} />
         </CartProvider>
       </ProductsProvider>
