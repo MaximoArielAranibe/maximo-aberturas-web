@@ -11,6 +11,7 @@ import SvgWhatsapp from './components/icons/SvgWhatsapp.jsx';
 import Footer from './components/Footer.jsx';
 import { useEffect } from 'react';
 import Description from './components/Description.jsx';
+import { Analytics } from "@vercel/analytics/react"
 
 // Componente que maneja el scroll al principio de la página
 const ScrollToTop = () => {
