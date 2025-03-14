@@ -41,7 +41,8 @@ const Products = ({ category }) => {
 
   return (
     <section className="products">
-      <Title link={category || 'Productos'} toLink={category} titleStyle="products__title poppins-bold" />
+      <Title link={(category || 'Productos').replace(/-/g, ' ')} toLink={category} titleStyle="products__title poppins-bold" />
+
       <ul className="products__container"
         ref={scrollContainerRef}
         onMouseDown={handleMouseDown}

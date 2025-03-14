@@ -25,10 +25,12 @@ const Main = () => {
       </div>
       <Products category="ventanas" />
       <Products category="puertas" />
+      <Products category="puertas-placas" />
       <Products category="ventanas-balcon" />
       <Products category="portones" />
-      <Products category="puertas-placas" />
       <Products category="rajas-de-abrir" />
+      <Products category="rejas" />
+      <Products category="aislantes" />
     </>
   );
 };

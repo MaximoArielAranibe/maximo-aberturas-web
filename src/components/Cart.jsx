@@ -9,7 +9,7 @@ const Cart = () => {
   const { cart, total, deleteFromCart, clearCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
 
   if (cart.length === 0) {
-    return <div className='cart__empty'>Tu carrito está vacío...</div>;
+    return <div className='cart__empty'><h3>Tu carrito está vacío...</h3></div>;
   }
   return (
     <div className="cart">
