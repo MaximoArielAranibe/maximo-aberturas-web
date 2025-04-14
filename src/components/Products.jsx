@@ -52,9 +52,9 @@ const Products = ({ category }) => {
         {filteredProducts.map(({ id, thumbnail, title, price }) => (
           <li key={id} className="product">
             <img src={thumbnail} alt={title} className="product__thumbnail" />
-            <h3 className="product__title open-sans-bold">{title}</h3>
-            <p className="product__price poppins-bold">${formatPrice(price)}</p>
-            <ButtonCart action={() => addToCart({ id, title, price, thumbnail })} text='Agregar al carrito' icon={<SvgCart />} />
+            //<h3 className="product__title open-sans-bold">{title}</h3>
+            {/*             <p className="product__price poppins-bold">${formatPrice(price)}</p>
+ */}            <ButtonCart action={() => addToCart({ id, title, price, thumbnail })} text='Agregar al carrito' icon={<SvgCart />} />
             <ButtonCart action={() => navigate(`/descripcion/${id}`)} text='Ver más información' />
           </li>
         ))}

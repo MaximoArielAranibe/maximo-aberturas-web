@@ -54,7 +54,7 @@ const Card = () => {
           <div>{isInOffer ? <h3 className="card__offer">OFERTA</h3> : <h3></h3>}</div>
           <div className="card__details">
             <h4 className="card__details-name">{title.toLowerCase()}</h4>
-            <p className="card__details-price">${formatPrice(price)}</p>
+           {/*  <p className="card__details-price">${formatPrice(price)}</p> */}
           </div>
         </div>
       ))}
