@@ -11,6 +11,7 @@ import SvgWhatsapp from './components/icons/SvgWhatsapp.jsx';
 import Footer from './components/Footer.jsx';
 import { useEffect } from 'react';
 import Description from './components/Description.jsx';
+import OrdersAdmins from './components/OrdersAdmins.jsx';
 import { Analytics } from "@vercel/analytics/react"
 
 // Componente que maneja el scroll al principio de la página
@@ -50,11 +51,13 @@ function App() {
             <Route path='/categoria/:categoryName' element={<Category />} />
             <Route path='/cart' element={<Cart />} />
             <Route path="/descripcion/:id" element={<Description />} />
+            <Route path="/admin/pedidos" element={<OrdersAdmins />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
 
           <Footer />
           <ToastContainer autoClose={1000} />
+          <Analytics />
         </CartProvider>
       </ProductsProvider>
     </BrowserRouter>

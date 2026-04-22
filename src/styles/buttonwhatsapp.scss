@@ -1,3 +1,4 @@
+
 .buttonwhatsapp {
   padding: 10px 20px;
   font-size: 16px;
@@ -7,9 +8,17 @@
   border-radius: 7px;
   cursor: pointer;
   transition: 0.2s ease-out;
+  font-family: $poppins, sans-serif;
+  font-weight: 700;
 }
 
 .buttonwhatsapp:hover {
   transform: scale(1.1, 1.1);
   background-color: $primary-700;
+}
+
+.buttonwhatsapp:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
 }

@@ -14,7 +14,7 @@ export default defineConfig({
           @import "bootstrap/scss/functions";
           @import "bootstrap/scss/variables";
           @import "bootstrap/scss/mixins";
-          @import "./src/styles/_variables.scss";
+          @import "@/styles/_variables.scss";
         `
       },
     },

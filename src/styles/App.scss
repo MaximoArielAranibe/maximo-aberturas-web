@@ -1,11 +1,14 @@
-@import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import 'navbar.scss';
-// Importar las funciones y mixins de Bootstrap
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
+// ✅ 1. PRIMERO @use (siempre arriba)
 
+// ✅ 2. después @import de librerías externas (CSS)
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// ✅ 3. después imports locales
+@import 'navbar.scss';
+
+// ✅ 4. después bootstrap
+@import 'bootstrap/scss/bootstrap';
+// resto del código...
 * {
   :focus {
     outline-offset: 0;

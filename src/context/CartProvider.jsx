@@ -3,20 +3,23 @@ import { toast } from 'react-toastify';
 
 export const CartContext = createContext([]);
 
+const CART_KEY = 'aberturas_cart';
+const TOTAL_KEY = 'aberturas_total';
+
 const CartProvider = ({ children }) => {
   const [total, setTotal] = useState(() => {
-    const savedTotal = localStorage.getItem('total');
+    const savedTotal = localStorage.getItem(TOTAL_KEY);
     return savedTotal ? JSON.parse(savedTotal) : 0;
   });
 
   const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem('cart');
+    const savedCart = localStorage.getItem(CART_KEY);
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-    localStorage.setItem('total', JSON.stringify(total));
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    localStorage.setItem(TOTAL_KEY, JSON.stringify(total));
   }, [cart, total]);
 
   const notifyAdd = () => {
@@ -56,12 +59,15 @@ const CartProvider = ({ children }) => {
     setCart(updatedCart);
   };
 
-  const clearCart = () => {
+  const clearCart = ({ notify = true } = {}) => {
     setCart([]);
     setTotal(0);
-    localStorage.removeItem('cart');
-    localStorage.removeItem('total');
-    toast.error("Has vaciado el carrito", { position: 'bottom-center' })
+    localStorage.removeItem(CART_KEY);
+    localStorage.removeItem(TOTAL_KEY);
+
+    if (notify) {
+      toast.error("Has vaciado el carrito", { position: 'bottom-center' })
+    }
   };
 
   const incrementQuantity = (id) => {
